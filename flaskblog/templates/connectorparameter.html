@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'content.css')}}"/>
+<form action="{{ url_for('result') }}" method="post">
+    <div class="content">
+	<div class="form-group">
+          <label style="color:white;" for="InputGender">Choose Gender 1 for Male and 0 for Female</label>
+          <select class="form-control" id="InputGender" name="gender">
+            <option>1</option>
+            <option>0</option>
+          </select>
+        </div>
+        <h1 style="text-align: center;">Connector Analysis Parameter Input</h1>
+        <div class="textbox">
+            <label name="totaltweet">Input total tweet: </label>
+            <input id="totaltweet" type="text" placeholder="Total Tweet" name="totaltweetinput" value="">
+        </div>
+        <div class="textbox">
+            <label name="follower">Input total follower: </label>  
+            <input id="follower" type="text" placeholder="Follower" name="totalfollowerinput" value=""/>
+        </div>
+        <div class="textbox">
+            <label name="following">Input total following: </label>
+            <input id="following" type="text" placeholder="Following" name="totalfollowinginput" value=""/>
+        </div>
+        <div class = "Submitbutton">
+            {{form.submit_test}}
+        </div>
+
+    </div>
+</form>
+    
+{% endblock %}
+
+
+
+
+
+

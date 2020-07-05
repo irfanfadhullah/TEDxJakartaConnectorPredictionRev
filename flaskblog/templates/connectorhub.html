@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'content.css')}}">
+<div class="content">
+    <div class="analysistitle">
+        {% if title %}
+        <h1>{{ title }}</h1>
+        {% else %}
+        <h1>Social Network Analysis</h1>
+        {% endif %}
+        <p>Connector Analysis adalah sebuah metode pengklasifikasian connector dari calon audience</p>
+    </div>
+</div>
+{% endblock %}
